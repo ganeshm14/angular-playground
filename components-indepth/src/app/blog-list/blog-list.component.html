@@ -1,2 +1,1 @@
-<app-blog-post-tile title="Blog 1" summary = "Blog summary 1"></app-blog-post-tile>
-<app-blog-post-tile title="Blog 2" summary = "Blog summary 2"></app-blog-post-tile>
+<app-blog-post-tile *ngFor="let post of blogPosts" [post]="post"></app-blog-post-tile>
