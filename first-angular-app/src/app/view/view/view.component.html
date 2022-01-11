@@ -6,3 +6,4 @@ User Name: <input type="text" [(ngModel)]="userName">
     <p>Public repos: {{response.public_repos}}</p>
 
 </div>
+<div *ngIf="userNotFound">No user found</div>

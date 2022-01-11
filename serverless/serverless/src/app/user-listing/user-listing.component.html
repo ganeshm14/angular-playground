@@ -1,0 +1,20 @@
+<h2>Collection Listing</h2>
+
+<button routerLink="/new-collection">Create New Collection</button>
+<table>
+<tr>
+<th>Collection Name</th>
+<th>Collection Description</th>
+<th>Squad</th>
+<th>Action</th>
+<th>Download</th>
+</tr>
+<tr *ngFor="let user of users">
+<td>{{user.collName}}</td>
+<td>{{user.collDesc}}</td>
+<td>{{user.squad}}</td>
+<td><button (click)="deleteUser(user.collName)">Delete</button></td>
+<td ng-if="{{user.url}}"><a href="{{user.url}}">Latest version</a></td>
+<td ng-if="{{user.url}}"><a href="/" (click)="findPreviousVersion()">Previous version</a></td>
+</tr>
+</table>

@@ -1,0 +1,7 @@
+{
+    "/dev/upload": {
+    "target": "https://89ireywn53.execute-api.us-east-1.amazonaws.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

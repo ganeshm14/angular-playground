@@ -11,13 +11,13 @@ export class BlogPostTileComponent implements OnInit {
   @Input() post: BlogPost;
   fullSummary: string;
   constructor(private truncatePipe: TruncatePipe) { }
-
+  buttonClicked : true;
   ngOnInit(): void {
     this.fullSummary = this.post.summary;
-    this.post.summary = this.truncatePipe.transform(this.post.summary,30);
+    this.post.summary = this.truncatePipe.transform(this.post.summary,50);
   }
 
-  showFullSummary(){
+  toggleFullSummary(){
     this.post.summary = this.fullSummary;
   }
 }
